@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "^17.0.21",
     "element-plus": "^2.1.4",
     "pinia": "^2.0.12",
     "unplugin-auto-import": "^0.6.6",

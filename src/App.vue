@@ -1,5 +1,5 @@
 <template>
-  <el-button>Default</el-button>
+  <router-view />
 </template>
 
 <script setup lang="ts">
