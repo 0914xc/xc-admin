@@ -11,6 +11,10 @@ const routes: Array<RouteRecordRaw> = [
                 path: '/index',
                 name: 'index',
                 component: () => import('../views/Home.vue')
+            }, {
+                path: '/genshin',
+                name: 'genshin',
+                component: () => import('../views/Genshin.vue')
             }
         ]
     }

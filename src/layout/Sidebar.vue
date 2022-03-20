@@ -1,6 +1,6 @@
 <template>
   <el-menu
-      default-active="2"
+      default-active="1-1"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
@@ -12,8 +12,12 @@
         <span>Navigator One</span>
       </template>
       <el-menu-item-group title="Group One">
-        <el-menu-item index="1-1">item one</el-menu-item>
-        <el-menu-item index="1-2">item one</el-menu-item>
+        <el-menu-item index="1-1">
+          <router-link to="/"><span>item one</span></router-link>
+        </el-menu-item>
+        <el-menu-item index="1-2">
+          <router-link to="/genshin"><span>item two</span></router-link>
+        </el-menu-item>
       </el-menu-item-group>
       <el-menu-item-group title="Group Two">
         <el-menu-item index="1-3">item three</el-menu-item>
@@ -43,7 +47,7 @@
 </template>
 
 <script lang="ts" setup>
-import {Expand, Fold} from "@element-plus/icons-vue";
+import {Expand, Fold, Location} from "@element-plus/icons-vue";
 import { useAppStore } from "../store/module/app";
 
 const appStore = useAppStore();
