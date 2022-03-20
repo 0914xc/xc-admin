@@ -3,13 +3,17 @@ import { store } from "../index";
 
 export const useAppStore = defineStore('app', {
     state: () => {
-        return {}
+        return {
+            sideCollapsed: false
+        }
     },
     getters: {
 
     },
     actions: {
-
+        toggleSidebar() {
+            this.sideCollapsed = !this.sideCollapsed
+        }
     }
 });
 

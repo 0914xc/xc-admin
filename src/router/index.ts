@@ -4,8 +4,15 @@ import type { App } from "vue";
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        name: 'Index',
-        component: () => import('../views/Index.vue')
+        component: () => import('../layout/BasicLayout.vue'),
+        redirect: '/index',
+        children: [
+            {
+                path: '/index',
+                name: 'index',
+                component: () => import('../views/Home.vue')
+            }
+        ]
     }
 ]
 
